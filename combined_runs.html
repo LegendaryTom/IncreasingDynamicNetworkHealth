@@ -1,0 +1,182 @@
+<html>
+<script src="lodash.js"></script>
+<script src="amcharts/core.js"></script>
+<script src="amcharts/charts.js"></script>
+<script src="new_data/no_connect1.js"></script>
+<script src="new_data/no_connect2.js"></script>
+<script src="new_data/no_connect3.js"></script>
+<script src="new_data/no_connect4.js"></script>
+<script src="new_data/no_connect5.js"></script>
+<script src="new_data/no_connect6.js"></script>
+<script src="new_data/no_connect7.js"></script>
+<script src="new_data/no_connect8.js"></script>
+<script src="new_data/no_connect9.js"></script>
+<script src="new_data/no_connect10.js"></script>
+
+<!--<script src="new_data/method6/run2.js"></script>-->
+
+<body>
+<div id="tChart"></div>
+<div id="tsChart"></div>
+<div id="spChart"></div>
+<div id="spdChart"></div>
+<div id="szChart"></div>
+<div id="nonChart"></div>
+
+<script>
+
+  setTimeout(function(){
+    var numberOfSteps = 20000;  //number of timesteps the network was run
+    var averageRun = [];
+    for(var n=0;n<runs[0].length;n++) {
+      var newEntry = {t:runs[0][n]["t"], "0.6t":0, "0.6ts":0, "0.6sp":0, "0.6sz":0, "0.6non":0, "0.6spd":0, "0.75t":0, "0.75ts":0, "0.75sp":0, "0.75sz":0, "0.75non":0, "0.75spd":0,  "0.9t":0, "0.9ts":0, "0.9sp":0, "0.9sz":0, "0.9non":0, "0.9spd":0};
+      //console.log(newEntry);
+      for(var i=0;i<runs.length;i++) {
+        //console.log(runs[i][n]);
+        newEntry["0.6t"]+= runs[i][n]["0.6t"]/runs.length;
+        newEntry["0.6ts"]+= runs[i][n]["0.6ts"]/runs.length;
+        newEntry["0.6sp"]+= runs[i][n]["0.6sp"]/runs.length;
+        newEntry["0.6sz"]+= (runs[i][n]["0.6sz"]/runs[i][n]["0.6sp"])/runs.length;
+        newEntry["0.6non"]+= runs[i][n]["0.6non"]/runs.length;
+        if(n<40){
+          newEntry["0.6spd"]+= runs[i][n]["0.6sp"]/runs.length;
+        }
+        else newEntry["0.6spd"]+= (runs[i][n]["0.6sp"]-runs[i][n-40]["0.6sp"])/runs.length;
+
+        newEntry["0.75t"]+= runs[i][n]["0.75t"]/runs.length;
+        newEntry["0.75ts"]+= runs[i][n]["0.75ts"]/runs.length;
+        newEntry["0.75sp"]+= runs[i][n]["0.75sp"]/runs.length;
+        newEntry["0.75sz"]+= (runs[i][n]["0.75sz"]/runs[i][n]["0.75sp"])/runs.length;
+        newEntry["0.75non"]+= runs[i][n]["0.75non"]/runs.length;
+        if(n<40){
+          newEntry["0.75spd"]+= runs[i][n]["0.75sp"]/runs.length;
+        }
+        else newEntry["0.75spd"]+= (runs[i][n]["0.75sp"]-runs[i][n-40]["0.75sp"])/runs.length;
+
+        newEntry["0.9t"]+= runs[i][n]["0.9t"]/runs.length;
+        newEntry["0.9ts"]+= runs[i][n]["0.9ts"]/runs.length;
+        newEntry["0.9sp"]+= runs[i][n]["0.9sp"]/runs.length;
+        newEntry["0.9sz"]+= (runs[i][n]["0.9sz"]/runs[i][n]["0.9sp"])/runs.length;
+        newEntry["0.9non"]+= runs[i][n]["0.9non"]/runs.length;
+
+        if(n<40){
+          newEntry["0.9spd"]+= runs[i][n]["0.9sp"]/runs.length;
+        }
+        else newEntry["0.9spd"]+= (runs[i][n]["0.9sp"]-runs[i][n-40]["0.9sp"])/runs.length;
+
+      }
+      averageRun.push(newEntry)
+    }
+
+    var sumCount = 0;
+    var sums = {"0.6t":0, "0.6ts":0, "0.6sp":0, "0.6sz":0, "0.6non":0, "0.6spd":0, "0.75t":0, "0.75ts":0, "0.75sp":0, "0.75sz":0, "0.75non":0, "0.75spd":0,  "0.9t":0, "0.9ts":0, "0.9sp":0, "0.9sz":0, "0.9non":0, "0.9spd":0};
+    for(var n=0; n<averageRun.length;n++){
+      //console.log("averageRun[n]['t']>1500:", averageRun[n]['t']>1500);
+      if(averageRun[n]['t']>1500){
+        //console.log("averageRun[n]['t']:", averageRun[n]['t']);
+        //sums["0.6t"]+=averageRun[n]["0.6t"];
+        sums["0.6ts"]+=averageRun[n]["0.6ts"];
+        sums["0.6sp"]+=averageRun[n]["0.6sp"];
+        sums["0.6sz"]+=averageRun[n]["0.6sz"];
+        sums["0.6spd"]+=averageRun[n]["0.6spd"];
+        //sums["0.75t"]+=averageRun[n]["0.75t"];
+        sums["0.75ts"]+=averageRun[n]["0.75ts"];
+        sums["0.75sp"]+=averageRun[n]["0.75sp"];
+        sums["0.75sz"]+=averageRun[n]["0.75sz"];
+        sums["0.75spd"]+=averageRun[n]["0.75spd"];
+        sums["0.9t"]+=averageRun[n]["0.9t"];
+        sums["0.9ts"]+=averageRun[n]["0.9ts"];
+        sums["0.9sp"]+=averageRun[n]["0.9sp"];
+        sums["0.9sz"]+=averageRun[n]["0.9sz"];
+        sums["0.9spd"]+=averageRun[n]["0.9spd"];
+        sumCount++;
+      }
+    }
+
+    console.log("0.6t:", Math.round(averageRun[averageRun.length-1]["0.6t"]*10)/10);
+    console.log("0.6ts:", Math.round(sums["0.6ts"]/sumCount*10)/10);
+    //console.log("0.6sp:", sums["0.6sp"]/sumCount);
+    console.log("0.6sz:", Math.round(sums["0.6sz"]/sumCount*10)/10);
+    console.log("0.6spd:", Math.round(sums["0.6spd"]/sumCount*10)/10);
+    console.log("0.75t:", Math.round(averageRun[averageRun.length-1]["0.75t"]*10)/10);
+    console.log("0.75ts:", Math.round(sums["0.75ts"]/sumCount*10)/10);
+    //console.log("0.75sp:", sums["0.75sp"]/sumCount);
+    console.log("0.75sz:", Math.round(sums["0.75sz"]/sumCount*10)/10);
+    console.log("0.75spd:", Math.round(sums["0.75spd"]/sumCount*10)/10);
+    console.log("0.9t:", Math.round(averageRun[averageRun.length-1]["0.9t"]*10)/10);
+    console.log("0.9ts:", Math.round(sums["0.9ts"]/sumCount*10)/10);
+    console.log("0.9spd:", Math.round(sums["0.9spd"]/sumCount*10)/10);
+    console.log("0.9sz:", Math.round(sums["0.9sz"]/sumCount*10)/10);
+
+    /** Uses the AmCharts library to create two charts, one for nodes and one for edges */
+    am4core.ready(function() {
+
+      //var charts = ["t","ts","sp", "spd", "sz", "non"];
+      var charts = ["t","ts","spd","sz"];
+      for(var n=0; n<charts.length; n++) {
+        var chartName = charts[n];
+        var chart = am4core.create(chartName+"Chart", am4charts.XYChart);
+
+        //historyOfNetwork = historyOfNetwork.filter(function(value){ return value!=null;});
+        chart.data = averageRun;
+
+        chart.colors.list = [
+          am4core.color("#845EC2"),
+          am4core.color("#FF9671"),
+          am4core.color("#D65DB1")
+        ];
+        chart.paddingRight = 20;
+
+        // Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.ValueAxis());
+        categoryAxis.dataFields.valueX = "t";
+        categoryAxis.min = 0;
+        categoryAxis.max = numberOfSteps;
+        categoryAxis.title.text = "Timesteps (t)";
+        categoryAxis.title.fontSize = "42";
+        categoryAxis.fontSize = "32";
+
+
+        // Create value axis
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.baseValue = 0;
+        valueAxis.title.fontSize = "42";
+        valueAxis.fontSize = "32";
+        //valueAxis.max = numberOfSteps/4;
+        //valueAxis.title.text = chartName.substring(0,1).toUpperCase()+chartName.substring(1);
+        if(chartName=='t') valueAxis.title.text = "Trees with Size > 1";
+        if(chartName=='ts') valueAxis.title.text = "Average Tree Size";
+        if(chartName=='spd') valueAxis.title.text = "Splits Per 400 Timesteps";
+        if(chartName=='sz') valueAxis.title.text = "Average Split Size";
+
+        // Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "0.6"+chartName;
+        series.dataFields.valueX = "t";
+        series.strokeWidth = 8;
+        series.name="p=0.6";//+chartName
+
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "0.75"+chartName;
+        series.dataFields.valueX = "t";
+        series.strokeWidth = 8;
+        series.name="p=0.75";//+chartName
+
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "0.9"+chartName;
+        series.dataFields.valueX = "t";
+        series.strokeWidth = 8;
+        series.name="p=0.9";//+chartName
+
+        chart.legend = new am4charts.Legend();
+        chart.legend.labels.template.fontSize = "32";
+        chart.exporting.menu = new am4core.ExportMenu();
+      }
+
+    });
+  }, 1000)
+
+
+</script>
+</body>
+</html>

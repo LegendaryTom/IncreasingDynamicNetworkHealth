@@ -1,0 +1,733 @@
+<html>
+<script src="lodash.js"></script>
+<script src="amcharts/core.js"></script>
+<script src="amcharts/charts.js"></script>
+<body>
+<div id="nodesChart"></div>
+<div id="edgesChart"></div>
+<div id="output"></div>
+
+<script>
+  var nextNodeID = 1;
+  var adjacencyList = {};  //stores state of the network
+  var nodeCount = 1;
+  var timesteps = 0;
+  var debug = false;
+  var historyOfNetwork = [];  //stores the historical count of the nodes and edges at each timestep
+  var numberOfSteps = 20000;  //number of timesteps to run the network for
+  var recordInterval = 10;
+  var getTreesTotalTime = 0;
+  var connectionMethod = 6;
+  var connectCount=0;
+  var c = 0.05;  //0.01, 0.05, 0.10, 0.25, and 0.50?
+  for(var n=recordInterval; n<numberOfSteps+1; n+=recordInterval){
+    historyOfNetwork[n] = {t:n};
+  }
+
+  var highlyConnectedNodes = [];
+  var lowlyConnectedNodes = [];
+  var splitCount = 0;
+  var lastSplitCount = 0;
+  var splitSize = 0;
+  var nonSplitCount = 0;
+
+  /** Restart the network from the beginning */
+  function initialize()
+  {
+    nextNodeID = 2;
+    adjacencyList = {};
+    nodeCount = 1;
+    timesteps = 0;
+    getTreesTotalTime = 0;
+    splitCount = 0;
+    splitSize = 0;
+    nonSplitCount = 0;
+    lastSplitCount = 0;
+    addNodeToNetwork(1, 1);  //Adds the starting edge from node 1 to node 1
+  }
+
+  /** Adds a node to the network */
+  function addNode() {
+    var newNode = nextNodeID;
+    nextNodeID++;
+    var nodeToConnectTo = parseInt(selectNodeToConnectTo());
+    addNodeToNetwork(newNode, nodeToConnectTo);
+  }
+
+  /** Selects which node the new node will connect to */
+  function selectNodeToConnectTo() {
+    //Calculate each node's probability of being chosen
+    var nodeChosenProbabilities = [];
+    var edgeCount = Math.max(countEdges(), 1);
+    highlyConnectedNodes = [];
+    lowlyConnectedNodes = [];
+    for (var node in adjacencyList) {
+      var degree = adjacencyList[node].length; //length of array is the degree of the node
+      nodeChosenProbabilities[node] = degree/(edgeCount*2); //Equation (1): Pt+1[u] = dt(u)/ 2mt
+      if(degree > 5) highlyConnectedNodes.push(node);
+      if(degree <= 1) highlyConnectedNodes.push(node);
+    }
+
+    //Choose a node based on the calculated probabilities
+    var randomValue = Math.random(); //Random value between 0 and 1
+    var cumulativeProbability = 0;  //Sum of nodeChosenProbabilities array is 1
+    for (var node in adjacencyList) {
+      cumulativeProbability+=nodeChosenProbabilities[node];
+      if(randomValue < cumulativeProbability) return node;
+    }
+//    console.error("Unable to select node to connect to");
+//    console.error("randomValue:", randomValue);
+//    console.error("cumulativeProbability:", cumulativeProbability);
+//    console.error("nodeChosenProbabilities.length:", nodeChosenProbabilities.length);
+//    console.error("Trying again");
+    return selectNodeToConnectTo();
+  }
+
+  /** Selects and deletes a node from the network */
+  function deleteNode() {
+    var nodeToDelete = selectNodeToDelete();
+    var treesBefore = getTrees().length;
+    removeNodeFromNetwork(nodeToDelete);
+    var treesAfter = getTrees().length;
+    //Check for a network split
+    if(treesBefore < treesAfter){
+      splitCount++;
+      splitSize+=treesAfter - treesBefore;
+    }
+    else
+    {
+      nonSplitCount++;
+    }
+  }
+
+  /** Selects which node in the network should be deleted */
+  function selectNodeToDelete() {
+    //Calculate each node's probability of being chosen
+    var nodeChosenProbabilities = [];
+    var edgeCount = Math.max(countEdges(), 1);
+    var total = 0;  //total cumulative probability
+    highlyConnectedNodes = [];
+    lowlyConnectedNodes = [];
+    for (var node in adjacencyList) {
+      var degree = adjacencyList[node].length; //length of array is the degree of the node
+      nodeChosenProbabilities[node] = (nodeCount - degree)/(nodeCount*nodeCount - (edgeCount*2)); //Equation (2): Pt+1[u] = (nt - dt(u))/(nt^2 - 2mt)
+      total+=nodeChosenProbabilities[node];
+      if(degree > 5) highlyConnectedNodes.push(node);
+      if(degree <= 1) highlyConnectedNodes.push(node);
+    }
+
+    //Normalize probabilities so that the sum is 1
+    for (var node in adjacencyList) {
+      nodeChosenProbabilities[node] = nodeChosenProbabilities[node]/total;
+    }
+
+    //Choose a node based on the calculated probabilities
+    var randomValue = Math.random(); //Random value between 0 and 1
+    var cumulativeProbability = 0;  //Sum of nodeChosenProbabilities array is 1
+    for (var node in adjacencyList) {
+      cumulativeProbability+=nodeChosenProbabilities[node];
+      if(randomValue < cumulativeProbability) return node;
+    }
+
+    console.error("Unable to select node to delete");
+    console.error("Trying again");
+    return selectNodeToDelete();
+  }
+
+  /**
+   * Adds an edge between the existing nodes (u) and (v)
+   * @param u {integer} - existing node (u)
+   * @param v {integer} - existing node (v)
+   */
+  function addEdgeToNetwork(u, v){
+    if(debug) console.log(`[%s]addEdgeToNetwork(%s,%s)`, timesteps, u, v);
+    adjacencyList[u].push(v);  //Add edge from u to v
+
+    //When the edge is between two separate nodes
+    if(u != v) adjacencyList[v].push(u);  //Add edge from v to u
+  }
+
+  /**
+   * Adds a new node (u) to the network and adds an edge between the new node (u) and an existing node (v)
+   * @param u {integer} - New node to add
+   * @param v {integer} - Existing node that the new node will connect to
+   */
+  function addNodeToNetwork(u, v){
+    if(debug) console.log(`addNodeToNetwork(%s,%s)`, u, v);
+    adjacencyList[u] = []; //Adds new node (u) to the network
+    adjacencyList[u].push(v);  //Add edge from u to v
+
+    //When the edge is between two separate nodes
+    if(u != v) adjacencyList[v].push(u);  //Add edge from v to u
+    nodeCount++;
+  }
+
+
+  /**
+   * Removes the node (v) from the network and any edges connected to that node
+   * @param v {integer} - Node to remove
+   */
+  function removeNodeFromNetwork(v){
+    if(debug)  console.log(`removeNodeFromNetwork(%s)`, v);
+    //Removes node v's entry in adjacencyList
+    delete adjacencyList[v];
+
+    //Removes all edges between node u and node v
+    for( var u in adjacencyList)
+    {
+      //if(debug)  console.log(`adjacencyList[%s] Before Pull:`, u, adjacencyList[u]);
+      adjacencyList[u] = adjacencyList[u].filter(function(value){ return value != v;});  // removes edges from u to v
+      //if(debug)  console.log(`adjacencyList[%s] After Pull:`, u, adjacencyList[u]);
+    }
+    nodeCount--;
+  }
+
+  /**
+   * Prints the networks total nodes and edges, and optionally the network's adjacency list to the console
+   */
+  function printNetwork() {
+    var output = ""
+    output+= "Nodes: "+nodeCount+"\n";
+    output+= "Edges: "+countEdges()+"\n";
+    output+= "====================================\n";
+    var trees = getTrees();
+    output+= "Trees:"+trees.length+"\n";
+    output+= "Non-Orphan Trees:"+nonOrphanTreeCount(trees)+"\n";
+    output+= "Tree Size:"+averageTreeSize(trees)+"\n";
+    output+= "SplitCount:"+splitCount+"\n";
+    output+= "SplitSize:"+splitSize+"\n";
+    output+= "====================================\n";
+    //output+= "nonSplitCount:"+nonSplitCount+"\n";
+    output+= "connectCount:"+connectCount+"\n";
+    output+= "Timesteps: "+timesteps+"\n";
+    //Debug: Print AdjacencyList
+    if(debug) {
+      output+= "AdjacencyList:\n";
+      for( var node in adjacencyList) {
+        output+= "Node("+node+"): ";
+        for(var n=0;n<adjacencyList[node].length;n++){
+          output+= node+"=>"+adjacencyList[node][n];
+          if(n+1<adjacencyList[node].length) output+=", ";
+        }
+        output+= "\n";
+      }
+    }
+    console.log(output)
+  }
+
+  /**
+   * Returns the number of edges
+   * @returns {number} - Edges in the network
+   */
+  function countEdges() {
+    var edgeCount = 0;
+    for( var node in adjacencyList) {
+      for(var n=0;n<adjacencyList[node].length;n++){
+        edgeCount++;
+      }
+    }
+    return edgeCount/2;
+  }
+
+  /**
+   * Causes the network to have a "Birth" or a "Death" and for the network to move forward one timestep
+   * Cheats to keep network from getting smaller than 10 nodes
+   * @param p {number} - Chance of birth occurring (between 0 and 1)
+   */
+  function selectBirthOrDeath(p) {
+    timesteps++;
+    if(Math.random() < p || nodeCount < 10) addNode();  //birth
+    else deleteNode();  //death
+
+    //Store a historical count of nodes and edges at every 10th timestep
+    if(timesteps%recordInterval==0)
+    {
+      var trees = getTrees();
+      historyOfNetwork[timesteps][p+"n"] = nodeCount;  //total nodes in the network
+      historyOfNetwork[timesteps][p+"e"] = countEdges();  //total edges in the network
+      historyOfNetwork[timesteps][p+"t"] = nonOrphanTreeCount(trees);  //
+      historyOfNetwork[timesteps][p+"ts"] = averageTreeSize(trees);  //
+      historyOfNetwork[timesteps][p+"sp"] = splitCount;  //number of splits
+      historyOfNetwork[timesteps][p+"sz"] = splitSize; ///Math.max(splitCount, 1);  //average split size
+      historyOfNetwork[timesteps][p+"non"] = nonSplitCount;  //Number of splits averted
+      historyOfNetwork[timesteps][p+"spd"] = splitCount-lastSplitCount;  //number of splits
+      lastSplitCount = splitCount;
+//      splitCount = 0;
+//      splitSize = 0;
+//      nonSplitCount = 0;
+    }
+
+  }
+
+  //  Number of separate trees in the network
+  //  Average size of the trees
+  //  Frequency of network splits that result in more separate trees
+  //  Average size of the split (how many new trees are created)
+  function getTrees() {
+    var startTime = new Date();
+    var network = JSON.parse(JSON.stringify(adjacencyList));
+//    console.log(network);
+//    console.log(adjacencyList);
+    var checked = [];
+    var treeCount = 0;
+    var checkTree = function(startNode){
+      var visitedNodes = [];
+      var adjacentNodes = network[startNode];
+      //console.log("checkTree["+startNode+"] adjacentNodes:", adjacentNodes);
+      for(var n=0; n<adjacentNodes.length; n++){
+        var node = adjacentNodes[n];
+        //console.log("checkTree["+startNode+"]["+node+"] checked.includes("+node+")==", checked.includes(node));
+        //console.log("checkTree["+startNode+"]["+node+"] checked:", checked);
+        if(checked.includes(node)) continue;
+        visitedNodes.push(node);
+        checked.push(node);
+        if(node == startNode) continue;
+        //console.log("checkTree["+startNode+"]["+node+"] checked:", checked);
+        var newVisitedNodes = checkTree(node);
+        visitedNodes = visitedNodes.concat(newVisitedNodes);
+        //console.log("checkTree["+startNode+"]["+node+"] newVisitedNodes:", newVisitedNodes);
+      }
+      //console.log("checkTree["+startNode+"].visitedNodes:", visitedNodes);
+      return visitedNodes;
+    };
+    var trees = [];
+    for(var node in network) {
+      node = parseInt(node);
+      if(checked.includes(node)) continue;
+      treeCount++;
+      //console.log("New Tree ("+treeCount+") starting at", node);
+      var visitedNodes = checkTree(node);
+      if(!visitedNodes.includes(node)) visitedNodes.push(node);
+      //console.log("Tree("+treeCount+"):", visitedNodes);
+      trees.push(visitedNodes);
+    }
+    var endTime = new Date();
+    getTreesTotalTime+= endTime-startTime;
+    //console.log("getTrees("+(endTime-startTime)+"):");
+    return trees;
+  }
+
+
+  function averageTreeSize(trees){
+    var treeCount = 0;
+    var sizeTotal = 0;
+    for(var n=0; n<trees.length;n++){
+      if(trees[n].length==1) continue;
+      treeCount++;
+      sizeTotal+=trees[n].length;
+    }
+    if(treeCount==0) return 0;
+    return Math.round(sizeTotal*10/treeCount)/10;
+  }
+
+  function nonOrphanTreeCount(trees){
+    var treeCount = 0;
+    for(var n=0; n<trees.length;n++){
+      if(trees[n].length==1) continue;
+      treeCount++;
+    }
+    return treeCount;
+  }
+
+  // Run the network for three different values of p
+
+  for(var runCount=0; runCount<5;runCount++)
+  {
+    var p = [0.6, 0.75, 0.9];
+    for(var i=0; i<p.length; i++) {
+      console.log("[run="+runCount+"]Running p=", p[i], ", c=", c, ", connectionMethod:", connectionMethod);
+
+      var startTime = new Date();
+      initialize();  //Starts a brand new network
+      // Runs the network for numberOfSteps timesteps
+      for(var n=0; n<numberOfSteps; n++){
+        selectBirthOrDeath(p[i]);  //Performs one timestep
+        if(Math.random() < c) connectAction(); //Takes a connect action
+      }
+      var endTime = new Date();
+
+
+      console.log("[run="+runCount+"]Elapsed Time:", endTime - startTime);
+      printNetwork();
+      //console.log("getTreesTotalTime:", getTreesTotalTime);
+    }
+    document.getElementById('output').innerText+= JSON.stringify(historyOfNetwork).replace(/null,/g, '')+",\n";
+  }
+
+
+
+  //Performs a connect action
+  function connectAction(){
+    var selectNodes = function(){
+      var nodes = [];
+      if(connectionMethod==1) nodes = selectionMethod1();
+      if(connectionMethod==2) nodes = selectionMethod2();
+      if(connectionMethod==3) nodes = selectionMethod3();
+      if(connectionMethod==4) nodes = selectionMethod4();
+      if(connectionMethod==5) nodes = selectionMethod5();
+      if(connectionMethod==6) nodes = selectionMethod6();
+      if(connectionMethod==7) nodes = selectionMethod7();
+      if(connectionMethod==8) nodes = selectionMethod8();
+
+      return nodes;
+    }
+    //Try five times
+    var nodes = [];
+    for(var n=0;n<5;n++){
+      try{
+        var nodes = selectNodes();
+        if(nodes[0]!=undefined && nodes[1]!=undefined) break;
+      } catch(e) { }
+    }
+    if(nodes[0]==undefined || nodes[1]==undefined){
+      console.error("connectAction(): Failed to select nodes", nodes);
+    }
+    else
+    {
+      addEdgeToNetwork(nodes[0], nodes[1]);
+    }
+    connectCount++;
+  }
+
+
+
+
+
+
+
+
+  //  1. Connect random nodes with each other
+  function selectionMethod1(){
+    var startTime = new Date();
+    var node1, node2;
+    var nodeID1, nodeID2;
+    while(!node1) {
+      nodeID1 = Math.floor(Math.random()*nextNodeID);
+      node1 = adjacencyList[nodeID1];
+    }
+    while(!node2) {
+      nodeID2 = Math.floor(Math.random()*nextNodeID);
+      node2 = adjacencyList[nodeID2];
+    }
+    var endTime = new Date();
+    if(endTime-startTime > 100) console.log("selectionMethod1("+(endTime-startTime)+")");
+    return [nodeID1, nodeID2];
+  }
+
+  //  2. Connect highly connected nodes together
+  function selectionMethod2(){
+    var startTime = new Date();
+    if(highlyConnectedNodes.length==0){
+      return selectionMethod1();
+    }
+    var node1, node2;
+    var nodeID1 = Math.floor(Math.random()*nextNodeID);
+    var nodeID2 = Math.floor(Math.random()*nextNodeID);
+    while(!node1 && !highlyConnectedNodes.includes(nodeID1)) {
+      nodeID1 = Math.floor(Math.random()*nextNodeID);
+      node1 = adjacencyList[nodeID1];
+    }
+    while(!node2 && !highlyConnectedNodes.includes(nodeID2)) {
+      nodeID2 = Math.floor(Math.random()*nextNodeID);
+      node2 = adjacencyList[nodeID2];
+    }
+    var endTime = new Date();
+    if(endTime-startTime > 100) console.log("selectionMethod2("+(endTime-startTime)+")");
+    return [nodeID1, nodeID2];
+  }
+
+  //  3. Connect lowly connected nodes together
+  function selectionMethod3(){
+    var startTime = new Date();
+    if(lowlyConnectedNodes.length==0){
+      return selectionMethod1();
+    }
+    var node1, node2;
+    var nodeID1 = Math.floor(Math.random()*nextNodeID);
+    var nodeID2 = Math.floor(Math.random()*nextNodeID);
+    while(!node1 && !lowlyConnectedNodes.includes(nodeID1)) {
+      nodeID1 = Math.floor(Math.random()*nextNodeID);
+      node1 = adjacencyList[nodeID1];
+    }
+    while(!node2 && !lowlyConnectedNodes.includes(nodeID2)) {
+      nodeID2 = Math.floor(Math.random()*nextNodeID);
+      node2 = adjacencyList[nodeID2];
+    }
+    var endTime = new Date();
+    if(endTime-startTime > 100) console.log("selectionMethod3("+(endTime-startTime)+")");
+    return [nodeID1, nodeID2];
+  }
+
+  //  4. Connect highly connected node to a random node
+  function selectionMethod4(){
+    var startTime = new Date();
+    if(highlyConnectedNodes.length==0){
+      return selectionMethod1();
+    }
+    var nodeID1 = selectionMethod2()[0];
+    var nodeID2 = selectionMethod1()[0];
+    var endTime = new Date();
+    if(endTime-startTime > 100) console.log("selectionMethod4("+(endTime-startTime)+")");
+    return [nodeID1, nodeID2];
+  }
+
+  //  5. Between nodes in separate connected components (trees)
+  function selectionMethod5(){
+    var startTime = new Date();
+    var trees = getTrees();
+    if(trees.length==1) {
+      console.log("selectionMethod5(): trees.length==1");
+      selectionMethod1();
+    }
+    //Pick a random tree
+    var treeID1 = Math.floor(Math.random()*trees.length);
+    var treeID2 = Math.floor(Math.random()*trees.length);
+    while(treeID1==treeID2){
+      treeID2 = Math.floor(Math.random()*trees.length);
+    }
+    var tree1 = trees[treeID1];
+    var tree2 = trees[treeID2];
+
+    //Pick a random node from each tree
+    var nodeID1 = tree1[Math.floor(Math.random()*tree1.length)];
+    var nodeID2 = tree2[Math.floor(Math.random()*tree2.length)];
+    var endTime = new Date();
+    if(endTime-startTime > 100) console.log("selectionMethod5("+(endTime-startTime)+")");
+    return [nodeID1, nodeID2];
+  }
+
+  //  6. For highly connected node A, connect neighbors of A to each other
+  function selectionMethod6(){
+    var startTime = new Date();
+    var nodes = selectionMethod2();  // Get one highly connected nodes
+    var nodeA = nodes[0];
+
+    var neighborsA = adjacencyList[nodeA];
+    if(neighborsA.length==0){
+      console.log("selectionMethod6(): neighborsA.length==0");
+      var nodes = selectionMethod2();  // Get one highly connected nodes
+      var nodeA = nodes[0];
+
+      var neighborsA = adjacencyList[nodeA];
+    }
+    //console.log(neighborsA);
+    var nodeID1 = neighborsA[Math.floor(Math.random()*neighborsA.length)];
+    var nodeID2 = neighborsA[Math.floor(Math.random()*neighborsA.length)];
+    var count=0;
+    while(count<10 && nodeID1==nodeID2){
+      nodeID2 = neighborsA[Math.floor(Math.random()*neighborsA.length)];
+      count++;
+    }
+    var endTime = new Date();
+    if(endTime-startTime > 100) console.log("selectionMethod6("+(endTime-startTime)+")");
+    return [nodeID1, nodeID2];
+  }
+
+  //  7. For highly connected nodes A and B, connect neighbors of A with neighbors of B
+  function selectionMethod7(){
+    var startTime = new Date();
+    var selectNeighbors = function(){
+      var nodes = selectionMethod2();  // Get two highly connected nodes
+      var nodeA = nodes[0];
+      var nodeB = nodes[1];
+
+      var neighborsA = adjacencyList[nodeA];
+      var neighborsB = adjacencyList[nodeB];
+      return [neighborsA, neighborsB];
+    };
+    var neighbors = selectNeighbors();
+    var neighborsA=neighbors[0];
+    var neighborsB=neighbors[1];
+    if(neighborsA.length==0){
+      console.log("selectionMethod7(): neighborsA.length==0");
+      var neighbors = selectNeighbors();
+      var neighborsA=neighbors[0];
+    }
+    if(neighborsB.length==0){
+      console.log("selectionMethod7(): neighborsB.length==0");
+      var neighbors = selectNeighbors();
+      var neighborsB=neighbors[1];
+    }
+    var nodeID1 = neighborsA[Math.floor(Math.random()*neighborsA.length)];
+    var nodeID2 = neighborsB[Math.floor(Math.random()*neighborsB.length)];
+
+    var endTime = new Date();
+    if(endTime-startTime > 100) console.log("selectionMethod7("+(endTime-startTime)+")");
+    return [nodeID1, nodeID2];
+  }
+
+  //  8. Connect neighbors of distances 2 from A/B.
+  function selectionMethod8(){
+    var startTime = new Date();
+    try{
+      var selectNeighbors = function(){
+        var nodes = selectionMethod2();  // Get two highly connected nodes
+        var nodeA = nodes[0];
+        var nodeB = nodes[1];
+
+        var neighborsA = adjacencyList[nodeA];
+        var neighborsB = adjacencyList[nodeB];
+        return [neighborsA, neighborsB];
+      };
+      var neighbors = selectNeighbors();
+      var neighborsA=neighbors[0];
+      var neighborsB=neighbors[1];
+
+      if(neighborsA.length==0){
+        console.log("selectionMethod8(): neighborsA.length==0");
+        var neighbors = selectNeighbors();
+        var neighborsA=neighbors[0];
+      }
+      if(neighborsB.length==0){
+        console.log("selectionMethod8(): neighborsB.length==0");
+        var neighbors = selectNeighbors();
+        var neighborsB=neighbors[1];
+      }
+      var nodeID1d1 = neighborsA[Math.floor(Math.random()*neighborsA.length)];
+      var nodeID2d1 = neighborsB[Math.floor(Math.random()*neighborsB.length)];
+
+      var neighborsAd2 = adjacencyList[nodeID1d1];
+      var neighborsBd2 = adjacencyList[nodeID2d1];
+
+      if(neighborsA.length==0){
+        console.log("selectionMethod8(): neighborsAd2.length==0");
+        var nodeID1d1 = neighborsA[Math.floor(Math.random()*neighborsA.length)];
+        var neighborsAd2 = adjacencyList[nodeID1d1];
+      }
+      if(neighborsB.length==0){
+        console.log("selectionMethod8(): neighborsBd2.length==0");
+        var nodeID2d1 = neighborsB[Math.floor(Math.random()*neighborsB.length)];
+        var neighborsBd2 = adjacencyList[nodeID2d1];
+      }
+      var nodeID1d2 = neighborsAd2[Math.floor(Math.random()*neighborsAd2.length)];
+      var nodeID2d2 = neighborsBd2[Math.floor(Math.random()*neighborsBd2.length)];
+      var endTime = new Date();
+      if(endTime-startTime > 100) console.log("selectionMethod8("+(endTime-startTime)+")");
+      return [nodeID1d2, nodeID2d2];
+    }catch(e){
+      console.error("selectionMethod8()", e);
+      var endTime = new Date();
+      if(endTime-startTime > 100) console.log("selectionMethod8("+(endTime-startTime)+")");
+      return selectionMethod2()
+    }
+  }
+
+  //Outputs JSON representation of one run to the page
+
+
+  /** Uses the AmCharts library to create two charts, one for nodes and one for edges */
+  /*
+  am4core.ready(function() {
+
+    var charts = ["nodes","edges"];
+    for(var n=0; n<charts.length; n++) {
+      var chartName = charts[n];
+      var chart = am4core.create(chartName+"Chart", am4charts.XYChart);
+
+      historyOfNetwork = historyOfNetwork.filter(function(value){ return value!=null;});
+      chart.data = historyOfNetwork;
+
+      chart.colors.list = [
+        am4core.color("#845EC2"),
+        am4core.color("#FF9671"),
+        am4core.color("#D65DB1")
+      ];
+      chart.paddingRight = 20;
+
+      // Create axes
+      var categoryAxis = chart.xAxes.push(new am4charts.ValueAxis());
+      categoryAxis.dataFields.valueX = "t";
+      categoryAxis.min = 0;
+      categoryAxis.max = numberOfSteps;
+      categoryAxis.title.text = "Timesteps (t)";
+
+
+      // Create value axis
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      valueAxis.baseValue = 0;
+      valueAxis.max = numberOfSteps/4;
+      valueAxis.title.text = chartName.substring(0,1).toUpperCase()+chartName.substring(1);
+
+      // Create series
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.6"+chartName.substring(0,1);
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.6";
+
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.75"+chartName.substring(0,1);
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.75";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.9"+chartName.substring(0,1);
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.9";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.6t";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.6trees";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.75t";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.75trees";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.9t";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.9trees";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.6sp";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.6splits";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.75sp";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.75splits";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.9sp";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.9splits";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.6sz";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.6splitSize";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.75sz";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.75splitSize";
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "0.9sz";
+      series.dataFields.valueX = "t";
+      series.strokeWidth = 2.3;
+      series.name="p=0.9splitSize";
+
+      chart.legend = new am4charts.Legend();
+      chart.exporting.menu = new am4core.ExportMenu();
+    }
+
+  });
+  */
+</script>
+</body>
+</html>

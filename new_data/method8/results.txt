@@ -1,0 +1,2130 @@
+=============================================================================================
+=============================================================================================
+=============================================================================================
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/core.js.map
+index.html:338 [run=0]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/charts.js.map
+index.html:350 [run=0]Elapsed Time: 218255
+index.html:215 Nodes: 3998
+Edges: 2421
+====================================
+Trees:1576
+Non-Orphan Trees:350
+Tree Size:7.9
+SplitCount:1864
+SplitSize:4246
+====================================
+connectCount:216
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1004428
+index.html:215 Nodes: 10122
+Edges: 7659
+====================================
+Trees:2463
+Non-Orphan Trees:617
+Tree Size:13.4
+SplitCount:1402
+SplitSize:3511
+====================================
+connectCount:410
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1613657
+index.html:215 Nodes: 16046
+Edges: 14390.5
+====================================
+Trees:1697
+Non-Orphan Trees:486
+Tree Size:30.5
+SplitCount:603
+SplitSize:1907
+====================================
+connectCount:601
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 304024
+index.html:215 Nodes: 4200
+Edges: 2563
+====================================
+Trees:1637
+Non-Orphan Trees:340
+Tree Size:8.5
+SplitCount:1822
+SplitSize:4277
+====================================
+connectCount:809
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1074434
+index.html:215 Nodes: 10072
+Edges: 7541
+====================================
+Trees:2536
+Non-Orphan Trees:609
+Tree Size:13.4
+SplitCount:1381
+SplitSize:3600
+====================================
+connectCount:1000
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1527795
+index.html:215 Nodes: 15948
+Edges: 14298
+====================================
+Trees:1681
+Non-Orphan Trees:415
+Tree Size:35.4
+SplitCount:652
+SplitSize:1948
+====================================
+connectCount:1185
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 289129
+index.html:215 Nodes: 4126
+Edges: 2633
+====================================
+Trees:1492
+Non-Orphan Trees:359
+Tree Size:8.3
+SplitCount:1846
+SplitSize:3992
+====================================
+connectCount:1369
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 888820
+index.html:215 Nodes: 9794
+Edges: 7484
+====================================
+Trees:2312
+Non-Orphan Trees:554
+Tree Size:14.5
+SplitCount:1390
+SplitSize:3431
+====================================
+connectCount:1569
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1345595
+index.html:215 Nodes: 16074
+Edges: 14574
+====================================
+Trees:1569
+Non-Orphan Trees:426
+Tree Size:35
+SplitCount:649
+SplitSize:1764
+====================================
+connectCount:1773
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 245778
+index.html:215 Nodes: 4094
+Edges: 2520
+====================================
+Trees:1573
+Non-Orphan Trees:346
+Tree Size:8.3
+SplitCount:1803
+SplitSize:4163
+====================================
+connectCount:1977
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 898305
+index.html:215 Nodes: 9958
+Edges: 7611
+====================================
+Trees:2347
+Non-Orphan Trees:534
+Tree Size:15.3
+SplitCount:1401
+SplitSize:3454
+====================================
+connectCount:2179
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1330722
+index.html:215 Nodes: 16086
+Edges: 14404
+====================================
+Trees:1721
+Non-Orphan Trees:531
+Tree Size:28.1
+SplitCount:580
+SplitSize:1930
+====================================
+connectCount:2395
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 220811
+index.html:215 Nodes: 3868
+Edges: 2409
+====================================
+Trees:1458
+Non-Orphan Trees:315
+Tree Size:8.6
+SplitCount:1851
+SplitSize:4155
+====================================
+connectCount:2606
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 862856
+index.html:215 Nodes: 9894
+Edges: 7647
+====================================
+Trees:2247
+Non-Orphan Trees:560
+Tree Size:14.7
+SplitCount:1352
+SplitSize:3357
+====================================
+connectCount:2774
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1353824
+index.html:215 Nodes: 15912
+Edges: 14406
+====================================
+Trees:1554
+Non-Orphan Trees:440
+Tree Size:33.6
+SplitCount:635
+SplitSize:1808
+====================================
+connectCount:2983
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 214293
+index.html:215 Nodes: 3958
+Edges: 2379
+====================================
+Trees:1578
+Non-Orphan Trees:340
+Tree Size:8
+SplitCount:1835
+SplitSize:4313
+====================================
+connectCount:3202
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 989184
+index.html:215 Nodes: 9972
+Edges: 7674
+====================================
+Trees:2307
+Non-Orphan Trees:538
+Tree Size:15.2
+SplitCount:1373
+SplitSize:3339
+====================================
+connectCount:3389
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 1227000
+index.html:215 Nodes: 15906
+Edges: 14370
+====================================
+Trees:1575
+Non-Orphan Trees:439
+Tree Size:33.6
+SplitCount:592
+SplitSize:1785
+====================================
+connectCount:3579
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 211475
+index.html:215 Nodes: 4124
+Edges: 2453
+====================================
+Trees:1670
+Non-Orphan Trees:366
+Tree Size:7.7
+SplitCount:1817
+SplitSize:4230
+====================================
+connectCount:3739
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 794667
+index.html:215 Nodes: 9828
+Edges: 7553.5
+====================================
+Trees:2277
+Non-Orphan Trees:547
+Tree Size:14.8
+SplitCount:1366
+SplitSize:3345
+====================================
+connectCount:3928
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 1217107
+index.html:215 Nodes: 15998
+Edges: 14529
+====================================
+Trees:1513
+Non-Orphan Trees:406
+Tree Size:36.7
+SplitCount:641
+SplitSize:1793
+====================================
+connectCount:4129
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 179106
+index.html:215 Nodes: 3842
+Edges: 2269
+====================================
+Trees:1572
+Non-Orphan Trees:332
+Tree Size:7.8
+SplitCount:1859
+SplitSize:4280
+====================================
+connectCount:4329
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 835516
+index.html:215 Nodes: 10118
+Edges: 7725
+====================================
+Trees:2393
+Non-Orphan Trees:620
+Tree Size:13.5
+SplitCount:1366
+SplitSize:3451
+====================================
+connectCount:4528
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 1086668
+index.html:215 Nodes: 16004
+Edges: 14488
+====================================
+Trees:1570
+Non-Orphan Trees:413
+Tree Size:35.9
+SplitCount:617
+SplitSize:1791
+====================================
+connectCount:4717
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 180496
+index.html:215 Nodes: 4056
+Edges: 2389
+====================================
+Trees:1666
+Non-Orphan Trees:334
+Tree Size:8.2
+SplitCount:1907
+SplitSize:4273
+====================================
+connectCount:4917
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 689513
+index.html:215 Nodes: 10072
+Edges: 7657
+====================================
+Trees:2417
+Non-Orphan Trees:586
+Tree Size:14.1
+SplitCount:1383
+SplitSize:3511
+====================================
+connectCount:5125
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 1069716
+index.html:215 Nodes: 15904
+Edges: 14593
+====================================
+Trees:1376
+Non-Orphan Trees:358
+Tree Size:41.6
+SplitCount:638
+SplitSize:1639
+====================================
+connectCount:5340
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.6 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 159112
+index.html:215 Nodes: 3998
+Edges: 2462
+====================================
+Trees:1537
+Non-Orphan Trees:341
+Tree Size:8.2
+SplitCount:1793
+SplitSize:4182
+====================================
+connectCount:5513
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.75 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 700616
+index.html:215 Nodes: 10060
+Edges: 7748.5
+====================================
+Trees:2322
+Non-Orphan Trees:553
+Tree Size:15
+SplitCount:1348
+SplitSize:3347
+====================================
+connectCount:5707
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.9 , c= 0.01 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 1044876
+index.html:215 Nodes: 16106
+Edges: 14728.5
+====================================
+Trees:1431
+Non-Orphan Trees:366
+Tree Size:41.1
+SplitCount:624
+SplitSize:1641
+====================================
+connectCount:5895
+Timesteps: 20000
+
+=============================================================================================
+=============================================================================================
+=============================================================================================
+[run=0]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/charts.js.map
+index.html:350 [run=0]Elapsed Time: 301189
+index.html:215 Nodes: 4266
+Edges: 2758.5
+====================================
+Trees:1525
+Non-Orphan Trees:263
+Tree Size:11.4
+SplitCount:1953
+SplitSize:4443
+====================================
+connectCount:1017
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1209630
+index.html:215 Nodes: 9802
+Edges: 7737
+====================================
+Trees:2167
+Non-Orphan Trees:392
+Tree Size:20.5
+SplitCount:1417
+SplitSize:3604
+====================================
+connectCount:1948
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1744275
+index.html:215 Nodes: 16086
+Edges: 15178.5
+====================================
+Trees:1387
+Non-Orphan Trees:284
+Tree Size:52.8
+SplitCount:596
+SplitSize:1692
+====================================
+connectCount:2955
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 289297
+index.html:215 Nodes: 3976
+Edges: 2636
+====================================
+Trees:1354
+Non-Orphan Trees:197
+Tree Size:14.3
+SplitCount:1949
+SplitSize:4498
+====================================
+connectCount:3973
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1278127
+index.html:215 Nodes: 9956
+Edges: 7994.5
+====================================
+Trees:2102
+Non-Orphan Trees:368
+Tree Size:22.3
+SplitCount:1382
+SplitSize:3394
+====================================
+connectCount:5027
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1617676
+index.html:215 Nodes: 16048
+Edges: 15385.5
+====================================
+Trees:1205
+Non-Orphan Trees:202
+Tree Size:74.5
+SplitCount:606
+SplitSize:1507
+====================================
+connectCount:6036
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 243079
+index.html:215 Nodes: 3952
+Edges: 2591.5
+====================================
+Trees:1373
+Non-Orphan Trees:249
+Tree Size:11.4
+SplitCount:1903
+SplitSize:4335
+====================================
+connectCount:7033
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1019114
+index.html:215 Nodes: 9970
+Edges: 7794
+====================================
+Trees:2271
+Non-Orphan Trees:430
+Tree Size:18.9
+SplitCount:1428
+SplitSize:3618
+====================================
+connectCount:8053
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1497470
+index.html:215 Nodes: 15988
+Edges: 15418.5
+====================================
+Trees:1197
+Non-Orphan Trees:221
+Tree Size:67.9
+SplitCount:632
+SplitSize:1426
+====================================
+connectCount:9097
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 223943
+index.html:215 Nodes: 3966
+Edges: 2557.5
+====================================
+Trees:1414
+Non-Orphan Trees:243
+Tree Size:11.5
+SplitCount:1986
+SplitSize:4458
+====================================
+connectCount:10059
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1039542
+index.html:215 Nodes: 10114
+Edges: 8071
+====================================
+Trees:2167
+Non-Orphan Trees:394
+Tree Size:21.2
+SplitCount:1432
+SplitSize:3511
+====================================
+connectCount:11067
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1394000
+index.html:215 Nodes: 16114
+Edges: 15371
+====================================
+Trees:1258
+Non-Orphan Trees:238
+Tree Size:63.4
+SplitCount:615
+SplitSize:1557
+====================================
+connectCount:12050
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 235120
+index.html:215 Nodes: 4042
+Edges: 2775.5
+====================================
+Trees:1296
+Non-Orphan Trees:190
+Tree Size:15.4
+SplitCount:1952
+SplitSize:4364
+====================================
+connectCount:13045
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1015047
+index.html:215 Nodes: 9972
+Edges: 8103
+====================================
+Trees:2000
+Non-Orphan Trees:371
+Tree Size:22.5
+SplitCount:1376
+SplitSize:3376
+====================================
+connectCount:14044
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1419495
+index.html:215 Nodes: 15990
+Edges: 15152.5
+====================================
+Trees:1354
+Non-Orphan Trees:258
+Tree Size:57.7
+SplitCount:620
+SplitSize:1635
+====================================
+connectCount:15018
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/core.js.map
+index.html:338 [run=0]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/charts.js.map
+index.html:350 [run=0]Elapsed Time: 137643
+index.html:215 Nodes: 3984
+Edges: 2471
+====================================
+Trees:1515
+Non-Orphan Trees:255
+Tree Size:10.7
+SplitCount:2044
+SplitSize:4730
+====================================
+connectCount:1014
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 606122
+index.html:215 Nodes: 10104
+Edges: 8073
+====================================
+Trees:2143
+Non-Orphan Trees:408
+Tree Size:20.5
+SplitCount:1356
+SplitSize:3456
+====================================
+connectCount:1997
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 879584
+index.html:215 Nodes: 15948
+Edges: 15329
+====================================
+Trees:1206
+Non-Orphan Trees:209
+Tree Size:71.5
+SplitCount:585
+SplitSize:1440
+====================================
+connectCount:2977
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 138796
+index.html:215 Nodes: 4092
+Edges: 2661.5
+====================================
+Trees:1438
+Non-Orphan Trees:225
+Tree Size:12.8
+SplitCount:1954
+SplitSize:4426
+====================================
+connectCount:3989
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 580963
+index.html:215 Nodes: 9844
+Edges: 7734
+====================================
+Trees:2222
+Non-Orphan Trees:432
+Tree Size:18.6
+SplitCount:1445
+SplitSize:3453
+====================================
+connectCount:4986
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 873524
+index.html:215 Nodes: 15906
+Edges: 15015
+====================================
+Trees:1401
+Non-Orphan Trees:253
+Tree Size:58.3
+SplitCount:669
+SplitSize:1740
+====================================
+connectCount:5992
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 142892
+index.html:215 Nodes: 4132
+Edges: 2695
+====================================
+Trees:1448
+Non-Orphan Trees:245
+Tree Size:12
+SplitCount:2021
+SplitSize:4597
+====================================
+connectCount:7033
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 592528
+index.html:215 Nodes: 9824
+Edges: 7769
+====================================
+Trees:2170
+Non-Orphan Trees:396
+Tree Size:20.3
+SplitCount:1375
+SplitSize:3517
+====================================
+connectCount:8049
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 858066
+index.html:215 Nodes: 16060
+Edges: 15135.5
+====================================
+Trees:1386
+Non-Orphan Trees:272
+Tree Size:54.9
+SplitCount:559
+SplitSize:1682
+====================================
+connectCount:9026
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 131091
+index.html:215 Nodes: 3998
+Edges: 2581
+====================================
+Trees:1422
+Non-Orphan Trees:217
+Tree Size:12.9
+SplitCount:2006
+SplitSize:4589
+====================================
+connectCount:10010
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 605568
+index.html:215 Nodes: 10210
+Edges: 7966
+====================================
+Trees:2350
+Non-Orphan Trees:428
+Tree Size:19.4
+SplitCount:1389
+SplitSize:3694
+====================================
+connectCount:10994
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 853852
+index.html:215 Nodes: 15974
+Edges: 15178.5
+====================================
+Trees:1322
+Non-Orphan Trees:227
+Tree Size:65.5
+SplitCount:653
+SplitSize:1618
+====================================
+connectCount:12024
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.6 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 137382
+index.html:215 Nodes: 4014
+Edges: 2599
+====================================
+Trees:1433
+Non-Orphan Trees:221
+Tree Size:12.7
+SplitCount:2082
+SplitSize:4652
+====================================
+connectCount:13095
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.75 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 609073
+index.html:215 Nodes: 9958
+Edges: 7856.5
+====================================
+Trees:2213
+Non-Orphan Trees:442
+Tree Size:18.5
+SplitCount:1439
+SplitSize:3515
+====================================
+connectCount:14063
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.9 , c= 0.05 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 875169
+index.html:215 Nodes: 15942
+Edges: 15035.5
+====================================
+Trees:1427
+Non-Orphan Trees:274
+Tree Size:54
+SplitCount:656
+SplitSize:1708
+====================================
+connectCount:15060
+Timesteps: 20000
+
+=============================================================================================
+=============================================================================================
+=============================================================================================
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/core.js.map
+index.html:338 [run=0]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/charts.js.map
+index.html:350 [run=0]Elapsed Time: 293563
+index.html:215 Nodes: 3856
+Edges: 2671.5
+====================================
+Trees:1245
+Non-Orphan Trees:133
+Tree Size:20.6
+SplitCount:2070
+SplitSize:4389
+====================================
+connectCount:2023
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1341410
+index.html:215 Nodes: 10064
+Edges: 8526
+====================================
+Trees:1998
+Non-Orphan Trees:281
+Tree Size:29.7
+SplitCount:1399
+SplitSize:3325
+====================================
+connectCount:4046
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1800237
+index.html:215 Nodes: 16012
+Edges: 15640
+====================================
+Trees:1413
+Non-Orphan Trees:209
+Tree Size:70.8
+SplitCount:597
+SplitSize:1734
+====================================
+connectCount:6011
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 323236
+index.html:215 Nodes: 3892
+Edges: 2668.5
+====================================
+Trees:1298
+Non-Orphan Trees:167
+Tree Size:16.5
+SplitCount:2031
+SplitSize:4337
+====================================
+connectCount:8096
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1370023
+index.html:215 Nodes: 10122
+Edges: 8745
+====================================
+Trees:1816
+Non-Orphan Trees:234
+Tree Size:36.5
+SplitCount:1360
+SplitSize:3202
+====================================
+connectCount:10117
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1652746
+index.html:215 Nodes: 15936
+Edges: 15930.5
+====================================
+Trees:1257
+Non-Orphan Trees:176
+Tree Size:84.4
+SplitCount:645
+SplitSize:1557
+====================================
+connectCount:12201
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 267815
+index.html:215 Nodes: 4098
+Edges: 2905
+====================================
+Trees:1271
+Non-Orphan Trees:154
+Tree Size:19.4
+SplitCount:2020
+SplitSize:4357
+====================================
+connectCount:14086
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1088176
+index.html:215 Nodes: 9974
+Edges: 8395
+====================================
+Trees:2017
+Non-Orphan Trees:246
+Tree Size:33.3
+SplitCount:1393
+SplitSize:3316
+====================================
+connectCount:16102
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1433711
+index.html:215 Nodes: 15964
+Edges: 15685
+====================================
+Trees:1376
+Non-Orphan Trees:213
+Tree Size:69.5
+SplitCount:658
+SplitSize:1757
+====================================
+connectCount:18145
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 253430
+index.html:215 Nodes: 3912
+Edges: 2759
+====================================
+Trees:1214
+Non-Orphan Trees:152
+Tree Size:18.7
+SplitCount:2051
+SplitSize:4411
+====================================
+connectCount:20203
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1087929
+index.html:215 Nodes: 10122
+Edges: 8740.5
+====================================
+Trees:1891
+Non-Orphan Trees:234
+Tree Size:36.2
+SplitCount:1354
+SplitSize:3158
+====================================
+connectCount:22239
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1484208
+index.html:215 Nodes: 16068
+Edges: 16107.5
+====================================
+Trees:1199
+Non-Orphan Trees:151
+Tree Size:99.5
+SplitCount:601
+SplitSize:1480
+====================================
+connectCount:24229
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 273287
+index.html:215 Nodes: 4064
+Edges: 2946.5
+====================================
+Trees:1227
+Non-Orphan Trees:152
+Tree Size:19.7
+SplitCount:1978
+SplitSize:4219
+====================================
+connectCount:26226
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1124369
+index.html:215 Nodes: 10138
+Edges: 8695
+====================================
+Trees:1894
+Non-Orphan Trees:250
+Tree Size:34
+SplitCount:1373
+SplitSize:3128
+====================================
+connectCount:28172
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1435898
+index.html:215 Nodes: 16074
+Edges: 16193
+====================================
+Trees:1126
+Non-Orphan Trees:169
+Tree Size:89.4
+SplitCount:579
+SplitSize:1370
+====================================
+connectCount:30169
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 226348
+index.html:215 Nodes: 3898
+Edges: 2619
+====================================
+Trees:1351
+Non-Orphan Trees:162
+Tree Size:16.7
+SplitCount:2070
+SplitSize:4602
+====================================
+connectCount:32139
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 944595
+index.html:215 Nodes: 10026
+Edges: 8306
+====================================
+Trees:2092
+Non-Orphan Trees:273
+Tree Size:30.1
+SplitCount:1437
+SplitSize:3435
+====================================
+connectCount:34156
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 1310604
+index.html:215 Nodes: 15972
+Edges: 16034.5
+====================================
+Trees:1140
+Non-Orphan Trees:168
+Tree Size:89.3
+SplitCount:587
+SplitSize:1427
+====================================
+connectCount:36074
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 233082
+index.html:215 Nodes: 4068
+Edges: 2741
+====================================
+Trees:1385
+Non-Orphan Trees:212
+Tree Size:13.7
+SplitCount:2048
+SplitSize:4593
+====================================
+connectCount:38047
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 930617
+index.html:215 Nodes: 10048
+Edges: 8419
+====================================
+Trees:2038
+Non-Orphan Trees:258
+Tree Size:32
+SplitCount:1379
+SplitSize:3364
+====================================
+connectCount:39999
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 1136857
+index.html:215 Nodes: 16116
+Edges: 16410.5
+====================================
+Trees:1053
+Non-Orphan Trees:129
+Tree Size:117.8
+SplitCount:558
+SplitSize:1311
+====================================
+connectCount:42041
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 199551
+index.html:215 Nodes: 4128
+Edges: 3010
+====================================
+Trees:1231
+Non-Orphan Trees:138
+Tree Size:22
+SplitCount:2022
+SplitSize:4345
+====================================
+connectCount:44151
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 821323
+index.html:215 Nodes: 10234
+Edges: 8846
+====================================
+Trees:1862
+Non-Orphan Trees:238
+Tree Size:36.2
+SplitCount:1316
+SplitSize:3165
+====================================
+connectCount:46148
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 1166855
+index.html:215 Nodes: 15966
+Edges: 16019
+====================================
+Trees:1193
+Non-Orphan Trees:153
+Tree Size:97.5
+SplitCount:612
+SplitSize:1477
+====================================
+connectCount:48190
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 180849
+index.html:215 Nodes: 4012
+Edges: 2843
+====================================
+Trees:1254
+Non-Orphan Trees:157
+Tree Size:18.6
+SplitCount:2024
+SplitSize:4297
+====================================
+connectCount:50163
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 785495
+index.html:215 Nodes: 9946
+Edges: 8438
+====================================
+Trees:1941
+Non-Orphan Trees:241
+Tree Size:34.2
+SplitCount:1404
+SplitSize:3303
+====================================
+connectCount:52142
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 1089182
+index.html:215 Nodes: 16138
+Edges: 16438.5
+====================================
+Trees:1034
+Non-Orphan Trees:136
+Tree Size:112.1
+SplitCount:561
+SplitSize:1289
+====================================
+connectCount:54190
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.6 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 158517
+index.html:215 Nodes: 4162
+Edges: 2999
+====================================
+Trees:1273
+Non-Orphan Trees:147
+Tree Size:20.6
+SplitCount:1992
+SplitSize:4288
+====================================
+connectCount:56210
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.75 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 669958
+index.html:215 Nodes: 10150
+Edges: 8662
+====================================
+Trees:1943
+Non-Orphan Trees:242
+Tree Size:34.9
+SplitCount:1396
+SplitSize:3190
+====================================
+connectCount:58203
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.9 , c= 0.1 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 936741
+index.html:215 Nodes: 15942
+Edges: 16038
+====================================
+Trees:1163
+Non-Orphan Trees:158
+Tree Size:94.5
+SplitCount:619
+SplitSize:1524
+====================================
+connectCount:60291
+Timesteps: 20000
+
+=============================================================================================
+=============================================================================================
+=============================================================================================
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/core.js.map
+index.html:338 [run=0]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/charts.js.map
+index.html:350 [run=0]Elapsed Time: 355910
+index.html:215 Nodes: 4032
+Edges: 3511
+====================================
+Trees:1050
+Non-Orphan Trees:57
+Tree Size:53.3
+SplitCount:1943
+SplitSize:3748
+====================================
+connectCount:4994
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1404637
+index.html:215 Nodes: 10074
+Edges: 9949
+====================================
+Trees:1663
+Non-Orphan Trees:113
+Tree Size:75.4
+SplitCount:1273
+SplitSize:2812
+====================================
+connectCount:9912
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1947265
+index.html:215 Nodes: 15928
+Edges: 18140
+====================================
+Trees:1091
+Non-Orphan Trees:86
+Tree Size:173.5
+SplitCount:574
+SplitSize:1410
+====================================
+connectCount:14912
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 393183
+index.html:215 Nodes: 4092
+Edges: 3408
+====================================
+Trees:1155
+Non-Orphan Trees:83
+Tree Size:36.4
+SplitCount:2023
+SplitSize:3996
+====================================
+connectCount:19981
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1533341
+index.html:215 Nodes: 10132
+Edges: 10264.5
+====================================
+Trees:1619
+Non-Orphan Trees:97
+Tree Size:88.8
+SplitCount:1263
+SplitSize:2719
+====================================
+connectCount:24991
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1620744
+index.html:215 Nodes: 16016
+Edges: 18349.5
+====================================
+Trees:1053
+Non-Orphan Trees:73
+Tree Size:206
+SplitCount:558
+SplitSize:1326
+====================================
+connectCount:29966
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 307388
+index.html:215 Nodes: 4034
+Edges: 3461
+====================================
+Trees:1060
+Non-Orphan Trees:74
+Tree Size:41.2
+SplitCount:1902
+SplitSize:3817
+====================================
+connectCount:34993
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1178440
+index.html:215 Nodes: 10080
+Edges: 10118
+====================================
+Trees:1666
+Non-Orphan Trees:103
+Tree Size:82.7
+SplitCount:1294
+SplitSize:2865
+====================================
+connectCount:39999
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1579708
+index.html:215 Nodes: 16010
+Edges: 18398.5
+====================================
+Trees:1062
+Non-Orphan Trees:74
+Tree Size:203
+SplitCount:550
+SplitSize:1328
+====================================
+connectCount:45042
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 313695
+index.html:215 Nodes: 4056
+Edges: 3478.5
+====================================
+Trees:1055
+Non-Orphan Trees:68
+Tree Size:45.1
+SplitCount:1968
+SplitSize:3849
+====================================
+connectCount:50028
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1163848
+index.html:215 Nodes: 9762
+Edges: 10093
+====================================
+Trees:1484
+Non-Orphan Trees:112
+Tree Size:74.9
+SplitCount:1305
+SplitSize:2638
+====================================
+connectCount:55035
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1572844
+index.html:215 Nodes: 15842
+Edges: 18489
+====================================
+Trees:971
+Non-Orphan Trees:66
+Tree Size:226.3
+SplitCount:580
+SplitSize:1236
+====================================
+connectCount:60215
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 322853
+index.html:215 Nodes: 4262
+Edges: 3602.5
+====================================
+Trees:1144
+Non-Orphan Trees:84
+Tree Size:38.1
+SplitCount:1907
+SplitSize:3951
+====================================
+connectCount:65191
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1162845
+index.html:215 Nodes: 10168
+Edges: 10132
+====================================
+Trees:1713
+Non-Orphan Trees:123
+Tree Size:69.7
+SplitCount:1333
+SplitSize:2865
+====================================
+connectCount:70160
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1381066
+index.html:215 Nodes: 16172
+Edges: 18495
+====================================
+Trees:1115
+Non-Orphan Trees:84
+Tree Size:180.2
+SplitCount:552
+SplitSize:1375
+====================================
+connectCount:75156
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 265132
+index.html:215 Nodes: 4110
+Edges: 3481.5
+====================================
+Trees:1093
+Non-Orphan Trees:60
+Tree Size:51.3
+SplitCount:1967
+SplitSize:3919
+====================================
+connectCount:80128
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 978055
+index.html:215 Nodes: 9902
+Edges: 9844
+====================================
+Trees:1669
+Non-Orphan Trees:96
+Tree Size:86.8
+SplitCount:1369
+SplitSize:2910
+====================================
+connectCount:85095
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 1406921
+index.html:215 Nodes: 15964
+Edges: 18627
+====================================
+Trees:930
+Non-Orphan Trees:68
+Tree Size:222.1
+SplitCount:555
+SplitSize:1128
+====================================
+connectCount:90022
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 226959
+index.html:215 Nodes: 4164
+Edges: 3572
+====================================
+Trees:1073
+Non-Orphan Trees:59
+Tree Size:53.4
+SplitCount:1959
+SplitSize:3807
+====================================
+connectCount:94975
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 901066
+index.html:215 Nodes: 10156
+Edges: 10276
+====================================
+Trees:1590
+Non-Orphan Trees:97
+Tree Size:89.3
+SplitCount:1285
+SplitSize:2789
+====================================
+connectCount:99964
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 1227178
+index.html:215 Nodes: 16258
+Edges: 19165.5
+====================================
+Trees:867
+Non-Orphan Trees:54
+Tree Size:286
+SplitCount:516
+SplitSize:1056
+====================================
+connectCount:104996
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 236694
+index.html:215 Nodes: 4214
+Edges: 3575
+====================================
+Trees:1132
+Non-Orphan Trees:79
+Tree Size:40
+SplitCount:1939
+SplitSize:3837
+====================================
+connectCount:109993
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 839509
+index.html:215 Nodes: 10072
+Edges: 10359
+====================================
+Trees:1547
+Non-Orphan Trees:94
+Tree Size:91.7
+SplitCount:1239
+SplitSize:2671
+====================================
+connectCount:115098
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 1236397
+index.html:215 Nodes: 16036
+Edges: 18560
+====================================
+Trees:996
+Non-Orphan Trees:68
+Tree Size:222.2
+SplitCount:544
+SplitSize:1253
+====================================
+connectCount:120121
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 193060
+index.html:215 Nodes: 4060
+Edges: 3580
+====================================
+Trees:977
+Non-Orphan Trees:56
+Tree Size:56
+SplitCount:1956
+SplitSize:3750
+====================================
+connectCount:125002
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 694537
+index.html:215 Nodes: 9794
+Edges: 9590.5
+====================================
+Trees:1698
+Non-Orphan Trees:120
+Tree Size:68.5
+SplitCount:1435
+SplitSize:3101
+====================================
+connectCount:130037
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 964607
+index.html:215 Nodes: 16048
+Edges: 17694.5
+====================================
+Trees:1384
+Non-Orphan Trees:105
+Tree Size:140.6
+SplitCount:573
+SplitSize:1675
+====================================
+connectCount:135021
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.6 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 170581
+index.html:215 Nodes: 4096
+Edges: 3488
+====================================
+Trees:1069
+Non-Orphan Trees:78
+Tree Size:39.8
+SplitCount:1956
+SplitSize:3886
+====================================
+connectCount:139951
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.75 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 647630
+index.html:215 Nodes: 9946
+Edges: 9761.5
+====================================
+Trees:1749
+Non-Orphan Trees:105
+Tree Size:79.1
+SplitCount:1329
+SplitSize:3029
+====================================
+connectCount:145050
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.9 , c= 0.25 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 998834
+index.html:215 Nodes: 15980
+Edges: 18794
+====================================
+Trees:899
+Non-Orphan Trees:65
+Tree Size:233
+SplitCount:520
+SplitSize:1101
+====================================
+connectCount:150063
+Timesteps: 20000
+
+=============================================================================================
+=============================================================================================
+=============================================================================================
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/core.js.map
+index.html:338 [run=0]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+DevTools failed to parse SourceMap: file:///C:/Users/Mom%20the%20Boss/Desktop/tom/Algorithms/FinalProject/src/src/amcharts/charts.js.map
+index.html:350 [run=0]Elapsed Time: 312936
+index.html:215 Nodes: 3794
+Edges: 4223.5
+====================================
+Trees:894
+Non-Orphan Trees:21
+Tree Size:139
+SplitCount:1773
+SplitSize:3265
+====================================
+connectCount:9876
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 1608540
+index.html:215 Nodes: 10090
+Edges: 12820.5
+====================================
+Trees:1398
+Non-Orphan Trees:31
+Tree Size:281.4
+SplitCount:1198
+SplitSize:2419
+====================================
+connectCount:19921
+Timesteps: 20000
+
+index.html:338 [run=0]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=0]Elapsed Time: 2107965
+index.html:215 Nodes: 16136
+Edges: 22506
+====================================
+Trees:933
+Non-Orphan Trees:35
+Tree Size:435.3
+SplitCount:504
+SplitSize:1117
+====================================
+connectCount:29904
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 456853
+index.html:215 Nodes: 3964
+Edges: 4168.5
+====================================
+Trees:952
+Non-Orphan Trees:47
+Tree Size:65.1
+SplitCount:1798
+SplitSize:3365
+====================================
+connectCount:39787
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1603839
+index.html:215 Nodes: 9880
+Edges: 12032
+====================================
+Trees:1565
+Non-Orphan Trees:41
+Tree Size:203.8
+SplitCount:1221
+SplitSize:2591
+====================================
+connectCount:49834
+Timesteps: 20000
+
+index.html:338 [run=1]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=1]Elapsed Time: 1673062
+index.html:215 Nodes: 16144
+Edges: 22966
+====================================
+Trees:834
+Non-Orphan Trees:29
+Tree Size:528.9
+SplitCount:468
+SplitSize:1028
+====================================
+connectCount:59826
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 309897
+index.html:215 Nodes: 3782
+Edges: 4102.5
+====================================
+Trees:882
+Non-Orphan Trees:18
+Tree Size:162.1
+SplitCount:1796
+SplitSize:3334
+====================================
+connectCount:69827
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1277424
+index.html:215 Nodes: 9806
+Edges: 12144
+====================================
+Trees:1477
+Non-Orphan Trees:41
+Tree Size:204.1
+SplitCount:1197
+SplitSize:2483
+====================================
+connectCount:79796
+Timesteps: 20000
+
+index.html:338 [run=2]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=2]Elapsed Time: 1726855
+index.html:215 Nodes: 16062
+Edges: 22839.5
+====================================
+Trees:834
+Non-Orphan Trees:32
+Tree Size:476.8
+SplitCount:490
+SplitSize:1009
+====================================
+connectCount:89784
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 331214
+index.html:215 Nodes: 3906
+Edges: 4540
+====================================
+Trees:798
+Non-Orphan Trees:21
+Tree Size:149
+SplitCount:1797
+SplitSize:3242
+====================================
+connectCount:99918
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1336475
+index.html:215 Nodes: 10418
+Edges: 13369.5
+====================================
+Trees:1383
+Non-Orphan Trees:42
+Tree Size:216.1
+SplitCount:1113
+SplitSize:2230
+====================================
+connectCount:109792
+Timesteps: 20000
+
+index.html:338 [run=3]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=3]Elapsed Time: 1785078
+index.html:215 Nodes: 15974
+Edges: 22789.5
+====================================
+Trees:820
+Non-Orphan Trees:29
+Tree Size:523.5
+SplitCount:489
+SplitSize:994
+====================================
+connectCount:119849
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 305339
+index.html:215 Nodes: 3902
+Edges: 4174.5
+====================================
+Trees:917
+Non-Orphan Trees:30
+Tree Size:100.5
+SplitCount:1824
+SplitSize:3393
+====================================
+connectCount:129687
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1080234
+index.html:215 Nodes: 9766
+Edges: 12062
+====================================
+Trees:1428
+Non-Orphan Trees:38
+Tree Size:220.4
+SplitCount:1188
+SplitSize:2489
+====================================
+connectCount:139612
+Timesteps: 20000
+
+index.html:338 [run=4]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=4]Elapsed Time: 1559927
+index.html:215 Nodes: 15966
+Edges: 22200.5
+====================================
+Trees:979
+Non-Orphan Trees:26
+Tree Size:577.4
+SplitCount:530
+SplitSize:1195
+====================================
+connectCount:149621
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 298047
+index.html:215 Nodes: 4046
+Edges: 4926.5
+====================================
+Trees:794
+Non-Orphan Trees:21
+Tree Size:155.8
+SplitCount:1559
+SplitSize:2862
+====================================
+connectCount:159485
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 1062831
+index.html:215 Nodes: 9726
+Edges: 12060
+====================================
+Trees:1451
+Non-Orphan Trees:38
+Tree Size:218.7
+SplitCount:1260
+SplitSize:2623
+====================================
+connectCount:169491
+Timesteps: 20000
+
+index.html:338 [run=5]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=5]Elapsed Time: 1330839
+index.html:215 Nodes: 16006
+Edges: 22660
+====================================
+Trees:865
+Non-Orphan Trees:33
+Tree Size:459.8
+SplitCount:485
+SplitSize:1058
+====================================
+connectCount:179380
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 223263
+index.html:215 Nodes: 3942
+Edges: 4173.5
+====================================
+Trees:935
+Non-Orphan Trees:37
+Tree Size:82.2
+SplitCount:1810
+SplitSize:3411
+====================================
+connectCount:189407
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 959053
+index.html:215 Nodes: 10084
+Edges: 12376.5
+====================================
+Trees:1512
+Non-Orphan Trees:51
+Tree Size:169.1
+SplitCount:1270
+SplitSize:2570
+====================================
+connectCount:199346
+Timesteps: 20000
+
+index.html:338 [run=6]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=6]Elapsed Time: 1299863
+index.html:215 Nodes: 15986
+Edges: 22530.5
+====================================
+Trees:908
+Non-Orphan Trees:27
+Tree Size:559.4
+SplitCount:489
+SplitSize:1135
+====================================
+connectCount:209300
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 263842
+index.html:215 Nodes: 4154
+Edges: 4537
+====================================
+Trees:946
+Non-Orphan Trees:19
+Tree Size:169.8
+SplitCount:1803
+SplitSize:3351
+====================================
+connectCount:219265
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 902495
+index.html:215 Nodes: 10096
+Edges: 12351.5
+====================================
+Trees:1459
+Non-Orphan Trees:45
+Tree Size:192.9
+SplitCount:1192
+SplitSize:2495
+====================================
+connectCount:229248
+Timesteps: 20000
+
+index.html:338 [run=7]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=7]Elapsed Time: 1112767
+index.html:215 Nodes: 16046
+Edges: 22215
+====================================
+Trees:1000
+Non-Orphan Trees:35
+Tree Size:430.9
+SplitCount:476
+SplitSize:1214
+====================================
+connectCount:239374
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 178181
+index.html:215 Nodes: 3882
+Edges: 4427.5
+====================================
+Trees:861
+Non-Orphan Trees:25
+Tree Size:121.8
+SplitCount:1834
+SplitSize:3281
+====================================
+connectCount:249394
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 770436
+index.html:215 Nodes: 9968
+Edges: 12462.5
+====================================
+Trees:1484
+Non-Orphan Trees:46
+Tree Size:185.4
+SplitCount:1229
+SplitSize:2492
+====================================
+connectCount:259307
+Timesteps: 20000
+
+index.html:338 [run=8]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=8]Elapsed Time: 1003081
+index.html:215 Nodes: 16120
+Edges: 22747.5
+====================================
+Trees:887
+Non-Orphan Trees:25
+Tree Size:610.3
+SplitCount:492
+SplitSize:1077
+====================================
+connectCount:269369
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.6 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 171064
+index.html:215 Nodes: 3924
+Edges: 4254.5
+====================================
+Trees:886
+Non-Orphan Trees:33
+Tree Size:93
+SplitCount:1818
+SplitSize:3436
+====================================
+connectCount:279401
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.75 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 705337
+index.html:215 Nodes: 10152
+Edges: 12768
+====================================
+Trees:1461
+Non-Orphan Trees:39
+Tree Size:223.8
+SplitCount:1157
+SplitSize:2446
+====================================
+connectCount:289377
+Timesteps: 20000
+
+index.html:338 [run=9]Running p= 0.9 , c= 0.5 , connectionMethod: 8
+index.html:350 [run=9]Elapsed Time: 988878
+index.html:215 Nodes: 15812
+Edges: 22148
+====================================
+Trees:943
+Non-Orphan Trees:32
+Tree Size:465.6
+SplitCount:542
+SplitSize:1157
+====================================
+connectCount:299380
+Timesteps: 20000
+
+=============================================================================================
+=============================================================================================
+=============================================================================================
